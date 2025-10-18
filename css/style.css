@@ -8,6 +8,19 @@
   --subtext-color: #555;
 }
 
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -75,7 +88,6 @@ section h2 {
 
 .site-branding h1 a {
   color: #fff;
-  text-decoration: none;
 }
 
 .site-branding p {
@@ -97,8 +109,6 @@ section h2 {
   color: #fff;
   margin: 0 0 0 1.5rem;
   font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 .nav-bar a:hover {
@@ -165,13 +175,6 @@ section h2 {
   font-weight: 600;
   color: var(--text-color);
   display: block;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-#publications a.pub-title:hover {
-  text-decoration: underline;
-  color: var(--primary-color);
 }
 
 #publications .pub-authors {
@@ -233,7 +236,6 @@ section h2 {
 
 /* NEW: Styles for the clickable link */
 a.profile-link {
-  text-decoration: none;
   color: inherit;
   display: block;
   transition: transform 0.2s ease-in-out;
@@ -330,13 +332,7 @@ a.profile-link:hover {
 
 /* NEW: Styles for the profile links */
 .profile-links a {
-  text-decoration: none;
-  color: var(--text-color);
   font-weight: 600;
-}
-.profile-links a:hover {
-  text-decoration: underline;
-  color: var(--primary-color);
 }
 
 /* --- Alumni Section --- */
