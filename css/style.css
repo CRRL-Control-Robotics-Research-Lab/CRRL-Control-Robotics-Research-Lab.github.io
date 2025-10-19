@@ -228,6 +228,11 @@ section h2 {
   gap: 2rem;
   margin-bottom: 3rem;
   align-items: center;
+  justify-items: center;
+}
+
+.faculty-grid--single {
+  grid-template-columns: 1fr;
 }
 
 .faculty-card {
