@@ -378,29 +378,40 @@ a.profile-link:hover {
 /* --- Robots Page Layout --- */
 .robot-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2.5rem;
 }
 
 .robot-card {
   text-align: center;
+  background: white;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .robot-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4/3;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .robot-card h3 {
-  font-size: 1rem;
-  padding: 0;
-  margin: 0.75rem 0 0 0;
+  margin: 0.75rem 0 0.25rem;
+  font-size: 1.05rem;
   color: var(--dark-shade);
+  font-weight: 600;
 }
 
+.robot-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--subtext-color);
+}
 
 
 /* --- Responsive Media Queries --- */
