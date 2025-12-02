@@ -168,6 +168,8 @@ section h2 {
   margin-bottom: 0.75rem; /* TIGHTER: Reduced space between entries */
   padding-left: 0.5rem;
   line-height: 1.5;       /* TIGHTER: Reduced space within entries */
+  /* no bullet points */
+  list-style-type: none;
 }
 
 #publications .pub-title {
