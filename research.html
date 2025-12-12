@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robots - Control/Robotics Research Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <div class="site-branding">
+        <h1><a href="index.html">Control/Robotics Research Lab</a></h1>
+        <p>Pioneering control, dynamics, and intelligent robotics.</p>
+      </div>
+      <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="lab.html">Lab</a>
+        <a href="joining.html">Joining</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+  <section>
+    <h2 id="robotics">Robotics</h2>
+    <p class="section-description justified-text">
+      We focus on creating safe and reliable autonomous systems capable of complex tasks in unstructured and dynamic environments. A core emphasis is on safety-critical control synthesis using Control Barrier Functions (CBFs) and Differentiable Optimization techniques to manage constraints in real time. We develop frameworks for Human-Robot Interaction (HRI) that proactively prioritize safety based on human pose and body detection, mitigating potential harm from unavoidable collisions. Our work extends to safe navigation for systems like quadruped robots using point-cloud based CBFs and developing lightweight localization methods to enhance real-time autonomy.
+    </p>
+    <h3 class="year-header">Selected Publications</h3>
+    <ul class="publication-list">
+      <li><a class="pub-title" href="https://doi.org/10.1109/ICRA55743.2025.11128486" target="_blank" rel="noopener noreferrer">MultiTalk: Introspective and Extrospective Dialogue for Human-Environment-LLM Alignment</a><div class="pub-authors">Venkata Naren Devarakonda, Ali Umut Kaypak, Shuaihang Yuan, Prashanth Krishnamurthy, Yi Fang, Farshad Khorrami</div><div class="pub-venue">Proceedings - IEEE International Conference on Robotics and Automation</div></li>
+      <li><a class="pub-title" href="https://doi.org/10.1109/WACV61041.2025.00202" target="_blank" rel="noopener noreferrer">FlashMix: Fast Map-Free LiDAR Localization via Feature Mixing and Contrastive-Constrained Accelerated Training</a><div class="pub-authors">Raktim Gautam Goswami, Naman Patel, Prashanth Krishnamurthy, Farshad Khorrami</div><div class="pub-venue">Proceedings -  IEEE Winter Conference on Applications of Computer Vision, WACV</div></li>
+      <li><a class="pub-title" href="https://doi.org/10.1016/j.robot.2025.105182" target="_blank" rel="noopener noreferrer">Differentiable optimization based time-varying control barrier functions for dynamic obstacle avoidance</a><div class="pub-authors">Bolun Dai, Rooholla Khorrambakht, Prashanth Krishnamurthy, Farshad Khorrami</div><div class="pub-venue">Robotics and Autonomous Systems</div></li>
+      <li><a class="pub-title" href="https://doi.org/10.1109/TCST.2025.3595751" target="_blank" rel="noopener noreferrer">Collision Avoidance for Convex Primitives via Differentiable Optimization-Based High-Order Control Barrier Functions</a><div class="pub-authors">Shiqing Wei, Rooholla Khorrambakht, Prashanth Krishnamurthy, Vinicius Mariano Gonçalves, Farshad Khorrami</div><div class="pub-venue">IEEE Transactions on Control Systems Technology</div></li>
+      <li><a class="pub-title" href="https://doi.org/10.1109/LRA.2024.3431870" target="_blank" rel="noopener noreferrer">Sailing Through Point Clouds: Safe Navigation Using Point Cloud Based Control Barrier Functions</a><div class="pub-authors">Bolun Dai, Rooholla Khorrambakht, Prashanth Krishnamurthy, Farshad Khorrami</div><div class="pub-venue">IEEE Robotics and Automation Letters</div></li>
+    </ul>
+
+    <h2 id="control-theory">Systems & Control</h2>
+    <p class="section-description justified-text">
+      Our Control Theory research develops the next generation of nonlinear control methods that offer explicit, rigorous performance guarantees, moving beyond asymptotic stability. The core problem addressed is achieving prescribed-time stabilization: ensuring a system's state converges to the origin within an arbitrary finite time interval specified by the control designer, regardless of the initial state. Our novel methodology relies on Dynamic High-Gain Scaling techniques combined with specialized time transformations and Lyapunov analysis to design robust controllers. Furthermore, we utilize Matrix Pencil-based approaches to algebraically formalize the problem, allowing us to precisely characterize the inherent design freedoms within the controller structure. This minimizes design conservatism and increases the feasibility and efficiency of implementing high-performance stabilizing control laws.
+    </p>
+    <h3 class="year-header">Selected Publications</h3>
+    <ul class="publication-list">
+     <li><a class="pub-title" href="https://doi.org/10.23919/ACC45564.2020.9147634" target="_blank" rel="noopener noreferrer">Prescribed-Time Output-Feedback Stabilization of Uncertain Nonlinear Systems with Unknown Time Delays</a><div class="pub-authors">P. Krishnamurthy, F. Khorrami</div><div class="pub-venue">Proceedings of the American Control Conference</div></li>
+     <li><a class="pub-title" href="https://doi.org/10.1109/TAC.2023.3274915" target="_blank" rel="noopener noreferrer">A Matrix Pencil Formulation for Nonconservative Realization of Scaling-Based Controllers for Feedforward-Like Systems</a><div class="pub-authors">Prashanth Krishnamurthy, Farshad Khorrami</div><div class="pub-venue">IEEE Transactions on Automatic Control</div></li>
+     <li><a class="pub-title" href="https://doi.org/10.1016/j.automatica.2020.108860" target="_blank" rel="noopener noreferrer">A dynamic high-gain design for prescribed-time regulation of nonlinear systems</a><div class="pub-authors">Prashanth Krishnamurthy, Farshad Khorrami, Miroslav Krstic</div><div class="pub-venue">Automatica</div></li>
+     <li><a class="pub-title" href="https://doi.org/10.1016/j.sysconle.2024.105857" target="_blank" rel="noopener noreferrer">Cascade/feedback interconnections of prescribed-time input-to-state stable systems</a><div class="pub-authors">Prashanth Krishnamurthy, Farshad Khorrami, Anthony Tzes</div><div class="pub-venue">Systems and Control Letters</div></li>
+     <li><a class="pub-title" href="https://doi.org/10.1016/j.automatica.2024.111980" target="_blank" rel="noopener noreferrer">Control of max-plus linear systems using feedback cycle shaping</a><div class="pub-authors">Vinicius Mariano Gonçalves, Prashanth Krishnamurthy, Anthony Tzes, Farshad Khorrami</div><div class="pub-venue">Automatica</div></li>
+    </ul>
+
+    <h2 id="cyber-physical-systems-security">Cyber Physical Systems & Security</h2>
+    <p class="section-description justified-text">
+      Our research focuses on the vulnerabilities and defense mechanisms within Cyber-Physical Systems (CPS), addressing threats from the software level down to the hardware. We develop novel techniques for vulnerability discovery in software by creating Interactive Agent Tools that enable Large Language Model (LLM) agents to run interactive utilities like debuggers for solving complex Capture The Flag (CTF) challenges. On the hardware and embedded system side, we pioneer golden-free detection methods for Hardware Trojans in PCBs and ICs by monitoring multimodal side channels and exploiting short-term aging effects. Other work explores tamper-proof network traffic measurements on the NIC for reliable intrusion detection.
+    </p>
+    <h3 class="year-header">Selected Publications</h3>
+    <ul class="publication-list">
+      <li><a class="pub-title" href="https://doi.org/10.1109/TNSM.2024.3512180" target="_blank" rel="noopener noreferrer">Tamper-Proof Network Traffic Measurements on a NIC for Intrusion Detection</a><div class="pub-authors">Meet Udeshi, Prashanth Krishnamurthy, Ramesh Karri, Farshad Khorrami</div><div class="pub-venue">IEEE Transactions on Network and Service Management</div></li>
+      <li><a class="pub-title" href="https://doi.org/10.1145/3699674" target="_blank" rel="noopener noreferrer">REMaQE: Reverse Engineering Math Equations from Executables</a><div class="pub-authors">Meet Udeshi, Prashanth Krishnamurthy, Hammond Pearce, Ramesh Karri, Farshad Khorrami</div><div class="pub-venue">ACM Transactions on Cyber-Physical Systems</div></li>
+      <li><a class="pub-title" href="https://doi.org/10.1109/MM.2024.3520996" target="_blank" rel="noopener noreferrer">MUDDLE: Multi-Modal Dynamic Detector Loopback Evaluator to Expose Trojans in Zero-Trust PCB Systems</a><div class="pub-authors">Prashanth Krishnamurthy, Hammond Pearce, Virinchi Roy Surabhi, Joshua Trujillo, Ramesh Karri, Farshad Khorrami</div><div class="pub-venue">IEEE Micro</div></li>
+      <li><a class="pub-title" href="https://doi.org/10.1016/j.automatica.2024.111994" target="_blank" rel="noopener noreferrer">Combining switching mechanism with re-initialization and anomaly detection for resiliency of cyber–physical systems</a><div class="pub-authors">Hao Fu, Prashanth Krishnamurthy, Farshad Khorrami</div><div class="pub-venue">Automatica</div></li>
+    </ul>
+
+    <h2 id="trustworthy-and-resilient-ai">Trustworthy and Resilient AI</h2>
+    <p class="section-description justified-text">
+      This area is dedicated to providing formal, provable guarantees for the stability, safety, and resilience of complex AI and machine learning systems. We establish theoretical limits and develop practical methods for certified robustness in deep neural networks (DNNs), including defending against backdoor attacks and providing provably robust perceptual similarity metrics. A key focus is on applying formal verification techniques to complex systems like segmentation models using randomized smoothing and diffusion models. Furthermore, we develop switching and re-initialization strategies to enhance resilience of CPS against attacks, guaranteeing the mean-square boundedness of system states through formal analysis.
+    </p>
+    <h3 class="year-header">Selected Publications</h3>
+    <ul class="publication-list">
+      <li><a class="pub-title" href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85199581507&amp;partnerID=40&amp;md5=b2961917536bdee4183d13263b0123bd" target="_blank" rel="noopener noreferrer">NOVEL QUADRATIC CONSTRAINTS FOR EXTENDING LIPSDP BEYOND SLOPE-RESTRICTED ACTIVATIONS</a><div class="pub-authors">Patricia Pauli, Aaron Havens, Alexandre Araujo, Siddharth Garg, Farshad Khorrami, Frank Allgöwer, Bin Hu</div><div class="pub-venue">12th International Conference on Learning Representations, ICLR</div></li>
+      <li><a class="pub-title" href="https://www.scopus.com/inward/record.uri?eid=2-s2.0-85170097330&amp;partnerID=40&amp;md5=ef9eadfc1fb39ef52246001d4a99e9bd" target="_blank" rel="noopener noreferrer">Towards Better Certified Segmentation via Diffusion Models</a><div class="pub-authors">Othmane Laousy, Alexandre Araujo, Guillaume Chassagnon, Marie-Pierre Revel, Siddharth Garg, Farshad Khorrami, Maria Vakalopoulou</div><div class="pub-venue">Proceedings of Machine Learning Research</div></li>
+      <li><a class="pub-title" href="https://doi.org/10.1109/ACCESS.2025.3543333" target="_blank" rel="noopener noreferrer">Detecting All-to-One Backdoor Attacks in Black-Box DNNs via Differential Robustness to Noise</a><div class="pub-authors">Hao Fu, Prashanth Krishnamurthy, Siddharth Garg, Farshad Khorrami</div><div class="pub-venue">IEEE Access</div></li>
+      <li><a class="pub-title" href="https://doi.org/10.1109/TAC.2023.3274915" target="_blank" rel="noopener noreferrer">A Matrix Pencil Formulation for Nonconservative Realization of Scaling-Based Controllers for Feedforward-Like Systems</a><div class="pub-authors">Prashanth Krishnamurthy, Farshad Khorrami</div><div class="pub-venue">IEEE Transactions on Automatic Control</div></li>
+      <li><a class="pub-title" href="https://doi.org/10.1109/WACV61041.2025.00522" target="_blank" rel="noopener noreferrer">CLIPScope: Enhancing Zero-Shot OOD Detection with Bayesian Scoring</a><div class="pub-authors">Hao Fu, Naman Patel, Prashanth Krishnamurthy, Farshad Khorrami</div><div class="pub-venue">Proceedings -  IEEE Winter Conference on Applications of Computer Vision, WACV</div></li>
+    </ul>
+  </section>
+</main>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Control/Robotics Research Lab • Tandon School of Engineering, New York University</p>
+  </footer>
+  
+
+</body>
+</html>

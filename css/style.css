@@ -164,7 +164,7 @@ section h2 {
   padding-left: 1.5rem;
 }
 
-#publications .publication-list li {
+.publication-list li {
   margin-bottom: 0.75rem; /* TIGHTER: Reduced space between entries */
   padding-left: 0.5rem;
   line-height: 1.5;       /* TIGHTER: Reduced space within entries */
@@ -228,7 +228,7 @@ section h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   align-items: center;
   justify-items: center;
 }
@@ -274,7 +274,7 @@ a.profile-link:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 .student-card {
@@ -445,6 +445,120 @@ a.profile-link:hover {
   .faculty-grid,
   .student-grid,
   .robot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Research Area Cards (Hybrid Style) --- */
+.research-area-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.research-area-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem 1.25rem 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.research-area-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.research-area-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  color: var(--dark-shade);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.4rem;
+}
+
+.research-area-card p {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.95rem;
+  color: var(--subtext-color);
+}
+
+.research-area-links a {
+  display: inline-block;
+  margin-right: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+.research-area-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 992px) {
+  .research-area-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .research-area-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #333;
+  border: none;
+  margin: 0 auto 2rem auto;
+}
+
+.two-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.area-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+
+.area-box:hover {
+  transform: translateY(-5px);
+}
+
+.area-box h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.keywords {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+    
+@media (max-width: 800px) {
+  .two-grid {
     grid-template-columns: 1fr;
   }
 }
