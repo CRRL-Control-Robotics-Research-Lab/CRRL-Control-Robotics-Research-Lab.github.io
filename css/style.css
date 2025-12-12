@@ -171,20 +171,20 @@ section h2 {
   list-style-type: none;
 }
 
-#publications .pub-title {
+.pub-title {
   font-size: 1.05rem;
   font-weight: 600;
   color: var(--text-color);
   display: block;
 }
 
-#publications .pub-authors {
+.pub-authors {
   font-size: 0.95rem;
   color: var(--subtext-color);
   margin-top: 0.1rem;     /* TIGHTER */
 }
 
-#publications .pub-venue {
+.pub-venue {
   font-size: 0.95rem;
   font-style: italic;
   color: var(--subtext-color);
