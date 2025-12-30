@@ -178,9 +178,11 @@ section h2 {
 }
 
 .publication-list li {
-  margin-bottom: 0.75rem; /* TIGHTER: Reduced space between entries */
+  margin-bottom: 0.75rem;
+  /* TIGHTER: Reduced space between entries */
   padding-left: 0.5rem;
-  line-height: 1.5;       /* TIGHTER: Reduced space within entries */
+  line-height: 1.5;
+  /* TIGHTER: Reduced space within entries */
   /* no bullet points */
   list-style-type: none;
 }
@@ -195,18 +197,21 @@ section h2 {
 .pub-authors {
   font-size: 0.95rem;
   color: var(--subtext-color);
-  margin-top: 0.1rem;     /* TIGHTER */
+  margin-top: 0.1rem;
+  /* TIGHTER */
 }
 
 .pub-venue {
   font-size: 0.95rem;
   font-style: italic;
   color: var(--subtext-color);
-  margin-top: 0.1rem;     /* TIGHTER */
+  margin-top: 0.1rem;
+  /* TIGHTER */
 }
 
 /* --- Responsive Media Queries --- */
 @media (max-width: 900px) {
+
   .student-grid,
   .robot-grid {
     grid-template-columns: 1fr 1fr;
@@ -219,15 +224,18 @@ section h2 {
     gap: 1rem;
     text-align: center;
   }
+
   .nav-bar a {
     margin: 0 0.75rem;
   }
+
   .research-grid {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 600px) {
+
   .faculty-grid,
   .student-grid,
   .robot-grid {
@@ -321,19 +329,23 @@ a.profile-link:hover {
   align-items: flex-start;
   /* The "white box" styles have been removed from this rule */
 }
+
 .profile-photo img {
   width: 100%;
   border-radius: 8px;
 }
+
 .profile-details h2 {
   margin-top: 0;
   border-bottom: none;
 }
+
 .profile-details h3 {
   margin-top: 2rem;
   border-bottom: 2px solid var(--light-shade);
   padding-bottom: 0.5rem;
 }
+
 .profile-details .title {
   font-size: 1.2rem;
   font-weight: 600;
@@ -341,13 +353,16 @@ a.profile-link:hover {
   margin-top: -1rem;
   margin-bottom: 1.5rem;
 }
+
 .profile-links {
   list-style: none;
   padding: 0;
   margin: 1.5rem 0;
 }
+
 .profile-links li {
-  margin-bottom: 0.75rem; /* A bit more space for links */
+  margin-bottom: 0.75rem;
+  /* A bit more space for links */
 }
 
 /* NEW: Styles for the profile links */
@@ -387,7 +402,7 @@ a.profile-link:hover {
   font-size: 0.9rem;
   color: var(--subtext-color);
   white-space: nowrap;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 /* --- Robots Page Layout --- */
@@ -403,7 +418,7 @@ a.profile-link:hover {
   background: white;
   border-radius: 12px;
   padding: 0.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -431,6 +446,7 @@ a.profile-link:hover {
 
 /* --- Responsive Media Queries --- */
 @media (max-width: 900px) {
+
   .student-grid,
   .robot-grid {
     grid-template-columns: 1fr 1fr;
@@ -443,18 +459,22 @@ a.profile-link:hover {
     gap: 1rem;
     text-align: center;
   }
+
   .nav-bar a {
     margin: 0 0.75rem;
   }
+
   .research-grid {
     grid-template-columns: 1fr;
   }
+
   .profile-container {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 600px) {
+
   .faculty-grid,
   .student-grid,
   .robot-grid {
@@ -477,7 +497,8 @@ a.profile-link:hover {
    ========================= */
 .research-menu {
   position: sticky;
-  top: 6rem; /* accounts for sticky header height */
+  top: 6rem;
+  /* accounts for sticky header height */
   align-self: start;
   background: #ffffff;
   border: 1px solid #e5e7eb;
@@ -509,7 +530,8 @@ a.profile-link:hover {
 
 .research-content section {
   margin-bottom: 3.5rem;
-  scroll-margin-top: 6.5rem; /* prevents sticky header overlap */
+  scroll-margin-top: 6.5rem;
+  /* prevents sticky header overlap */
 }
 
 .research-content h2 {
@@ -529,13 +551,13 @@ a.profile-link:hover {
   background: white;
   border-radius: 12px;
   padding: 1.25rem 1.25rem 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .research-area-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 .research-area-card h3 {
@@ -605,7 +627,7 @@ a.profile-link:hover {
   background: white;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease;
 }
 
@@ -624,7 +646,7 @@ a.profile-link:hover {
   color: #555;
   margin: 0;
 }
-    
+
 @media (max-width: 800px) {
   .two-grid {
     grid-template-columns: 1fr;
@@ -655,7 +677,7 @@ a.profile-link:hover {
 
 @media (max-width: 480px) {
 
-  .research-layout > * {
+  .research-layout>* {
     min-width: 0;
   }
 
@@ -679,7 +701,8 @@ a.profile-link:hover {
     word-break: break-word;
   }
 
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
   }
 }
