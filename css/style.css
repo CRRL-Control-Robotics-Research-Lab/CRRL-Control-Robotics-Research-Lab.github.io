@@ -68,6 +68,7 @@ section h2 {
 
 /* --- Header/Footer --- */
 .site-header {
+  position: sticky;
   background-color: var(--dark-shade);
   padding: 1rem 0;
 }
@@ -149,6 +150,19 @@ section h2 {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 900px) {
+  .research-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .research-menu {
+    position: relative;
+    top: auto;
+    margin-bottom: 2rem;
+  }
+}
+
 
 /* --- Publications Page Styling (UPDATED for Tighter Layout) --- */
 .year-header {
@@ -449,6 +463,61 @@ a.profile-link:hover {
 }
 
 /* --- Research Area Cards (Hybrid Style) --- */
+.research-layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+}
+
+/* =========================
+   Sidebar Menu
+   ========================= */
+.research-menu {
+  position: sticky;
+  top: 6rem; /* accounts for sticky header height */
+  align-self: start;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.research-menu h3 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #374151;
+}
+
+.research-menu a {
+  display: block;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 0.3rem;
+  border-radius: 4px;
+  color: #1f2933;
+  font-weight: 500;
+}
+
+.research-menu a:hover {
+  background: #eef2ff;
+}
+
+.research-content section {
+  margin-bottom: 3.5rem;
+  scroll-margin-top: 6.5rem; /* prevents sticky header overlap */
+}
+
+.research-content h2 {
+  margin-top: 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 3px solid #0b5ed7;
+}
+
 .research-area-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
