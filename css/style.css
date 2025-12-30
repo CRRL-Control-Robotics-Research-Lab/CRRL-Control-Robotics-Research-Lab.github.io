@@ -630,3 +630,56 @@ a.profile-link:hover {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+
+  .research-layout {
+    grid-template-columns: 1fr;
+    padding: 1.25rem 0.75rem;
+  }
+
+  .research-menu {
+    position: relative;
+    top: auto;
+    width: 100%;
+  }
+
+  .research-menu a {
+    padding: 0.6rem 0.5rem;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .research-layout > * {
+    min-width: 0;
+  }
+
+  .research-layout {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    box-sizing: border-box;
+  }
+
+  .research-menu {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .research-menu a {
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+}
