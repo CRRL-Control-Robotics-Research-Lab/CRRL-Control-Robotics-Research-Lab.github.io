@@ -5,6 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Control/Robotics Research Lab</title>
+  <meta name="description" content="The Control/Robotics Research Laboratory (CRRL) at NYU Tandon advances resilient autonomy through nonlinear control, certifiable machine learning, and cyber-physical systems security.">
+  <link rel="icon" href="files/images/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Control/Robotics Research Lab">
+  <meta property="og:description" content="The Control/Robotics Research Laboratory (CRRL) at NYU Tandon advances resilient autonomy through nonlinear control, certifiable machine learning, and cyber-physical systems security.">
+  <meta property="og:url" content="https://crrl.engineering.nyu.edu/">
+  <meta property="og:image" content="https://crrl.engineering.nyu.edu/files/images/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -12,10 +20,10 @@
   <header class="site-header">
     <div class="header-content">
       <a href="index.html" class="nav-logo">
-        <img src="files/images/logo_white.svg" alt="CRRL Logo">
+        <img src="files/images/logo_white.svg" alt="CRRL home">
       </a>
       <nav class="nav-bar">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active-link" aria-current="page">Home</a>
         <a href="research.html">Research</a>
         <a href="people.html">People</a>
         <a href="publications.html">Publications</a>
@@ -33,50 +41,50 @@
         cyber-physical systems security. We develop general principles and algorithms that provide safety, robustness,
         and assurance for modern robotic platforms, including legged robots, robotic arms, and interactive human-robot
         systems. Our work emphasizes rigorous guarantees, rooted in Lyapunov analysis, control-barrier methods, and
-        structured learning models, while grounding theory in deployable, experimentally validated systems. Through this integration, CRRL aims to establish reliable foundations for autonomous agents operating in complex, dynamic environments. The associated lab at NYU Abu Dhabi, the <a href="https://cair.nyuad.nyu.edu/"  target="_blank" rel="noopener noreferrer">Center for Artificial Intelligence and Robotics (CAIR)</a>, extends this vision through complementary research in robotics, control, and AI.</p>
+        structured learning models, while grounding theory in deployable, experimentally validated systems. Through this integration, CRRL aims to establish reliable foundations for autonomous agents operating in complex, dynamic environments. The associated lab at NYU Abu Dhabi, the <a href="https://cair.nyuad.nyu.edu/" target="_blank" rel="noopener noreferrer">Center for Artificial Intelligence and Robotics (CAIR)</a>, extends this vision through complementary research in robotics, control, and AI.</p>
     </section>
 
     <section id="research-areas">
       <h2>Research Areas</h2>
-
-      <section id="research-areas">
-        <div class="research-area-grid two-grid">
+        <div class="research-area-grid">
 
           <a href="research.html#robotics" style="text-decoration: none;">
-            <div class="research-area-card area-box robot-card">
+            <div class="research-area-card">
               <h3>Robotics</h3>
               <p class="keywords">Perception • World Models • VLA • CBF</p>
-              <img src="files/images/navigation.gif">
+              <video autoplay muted loop playsinline preload="metadata" poster="files/images/navigation-poster.jpg" aria-label="Quadruped robot navigating around obstacles">
+                <source src="files/images/navigation.mp4" type="video/mp4">
+              </video>
             </div>
           </a>
           <a href="research.html#systems-control" style="text-decoration: none;">
-            <div class="research-area-card area-box robot-card">
-              <h3>Systems & Control</h3>
+            <div class="research-area-card">
+              <h3>Systems &amp; Control</h3>
               <p class="keywords">Nonlinear Control • Hybrid Systems • Safety</p>
-              <img src="files/images/systems-control.png">
+              <img src="files/images/systems-control.png" alt="Level-set diagram for nonlinear control" loading="lazy">
             </div>
           </a>
           <a href="research.html#secure-cps" style="text-decoration: none;">
-            <div class="research-area-card area-box robot-card">
+            <div class="research-area-card">
               <h3>Secure Cyber-Physical Systems</h3>
-              <p class="keywords">Network security • Threat Detection • Anomaly Detection • Critical Infrastructure
+              <p class="keywords">Network Security • Threat Detection • Anomaly Detection • Critical Infrastructure
                 Security</p>
-              <img src="files/images/cps.png" style="aspect-ratio: 3.3/1;">
+              <img src="files/images/cps.png" style="aspect-ratio: 3.3/1;" alt="REMaQE reverse-engineering framework" loading="lazy">
             </div>
           </a>
           <a href="research.html#trustworthy-ai" style="text-decoration: none;">
-            <div class="research-area-card area-box robot-card">
+            <div class="research-area-card">
               <h3>Trustworthy &amp; Resilient AI</h3>
-              <p class="keywords">Adversarial attacks & Detection • Secure Learning • Certifiable Defenses</p>
-              <img src="files/images/trustai.png" style="aspect-ratio: 2.25/1;">
+              <p class="keywords">Adversarial Attacks &amp; Detection • Secure Learning • Certifiable Defenses</p>
+              <img src="files/images/trustai.jpg" style="aspect-ratio: auto;" alt="Original and adversarially attacked images with DreamSim distances (LipSim, ICLR 2024)" loading="lazy">
             </div>
           </a>
         </div>
-      </section>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; 2025 Control/Robotics Research Lab • Tandon School of Engineering, New York University</p>
+    <p>&copy; 2026 Control/Robotics Research Lab • Tandon School of Engineering, New York University</p>
   </footer>
 
 

@@ -2,12 +2,14 @@
 
 :root {
   --primary-color: #2980b9;
+  --primary-on-dark: #7fb8e0;
   --dark-shade: #2c3e50;
   --light-shade: #ecf0f1;
   --text-color: #34495e;
   --subtext-color: #555;
 }
 
+/* --- Base --- */
 a {
   color: var(--text-color);
   text-decoration: none;
@@ -57,29 +59,22 @@ section h2 {
   margin-bottom: 1rem;
 }
 
-
 .section-description {
   margin-top: -0.5rem;
   margin-bottom: 1rem;
-}
-
-.content-centered {
-  max-width: 80ch;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .justified-text {
   text-align: justify;
 }
 
-/* --- Header/Footer --- */
+/* --- Header --- */
 .site-header {
   position: sticky;
-  background-color: var(--dark-shade);
-  padding: 1rem 0;
   top: 0;
   z-index: 1000;
+  background-color: var(--dark-shade);
+  padding: 1rem 0;
 }
 
 .header-content {
@@ -94,12 +89,35 @@ section h2 {
 
 .nav-logo img {
   height: 42px;
-  align-content: center;
   vertical-align: middle;
-  padding: 0;
-  margin: 0;
 }
 
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.nav-bar a {
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav-bar a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.nav-bar a.active-link {
+  color: var(--primary-on-dark);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* --- Footer --- */
 .site-footer {
   background-color: var(--dark-shade);
   color: #fff;
@@ -107,332 +125,49 @@ section h2 {
   padding: 1.25rem 1rem;
 }
 
-/* --- Navigation --- */
-.nav-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-}
-.nav-bar a {
-  color: #fff;
-  margin: 0;
-  font-weight: 600;
+.site-footer p {
+  margin: 0.25rem 0;
 }
 
-.nav-bar a:hover {
-  color: var(--primary-color);
-}
-
-.nav-bar a.active-link {
-  color: var(--primary-color);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-}
-
-/* --- Research Section (Homepage) --- */
-.research-grid {
+/* --- Home: Research Area Cards --- */
+.research-area-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-}
-
-.research-item h3 {
-  margin: 0 0 0.5rem 0;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--primary-color);
-  color: var(--dark-shade);
-  font-size: 1.1rem;
-}
-
-.research-item p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: var(--subtext-color);
-}
-
-/* Add this inside your existing @media (max-width: 768px) block */
-@media (max-width: 768px) {
-  .research-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 900px) {
-  .research-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .research-menu {
-    position: relative;
-    top: auto;
-    margin-bottom: 2rem;
-  }
-}
-
-
-/* --- Publications Page Styling (UPDATED for Tighter Layout) --- */
-.year-header {
-  color: var(--dark-shade);
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #ddd;
-}
-
-.publication-list {
-  list-style-position: outside;
-  padding-left: 1.5rem;
-  margin-bottom: 2.0rem;
-}
-
-.publication-list li {
-  margin-bottom: 1.1rem;
-  padding-left: 0.5rem;
-  line-height: 1.5;
-  /* TIGHTER: Reduced space within entries */
-  /* no bullet points */
-  list-style-type: none;
-}
-
-.pub-title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--text-color);
-  display: block;
-}
-
-.pub-authors {
-  font-size: 0.95rem;
-  color: var(--subtext-color);
-  margin-top: 0.1rem;
-  /* TIGHTER */
-}
-
-.pub-venue {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #4a5866;
-  margin-top: 0.15rem;
-}
-
-/* --- Responsive Media Queries --- */
-@media (max-width: 900px) {
-
-  .student-grid,
-  .robot-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    gap: 0.75rem;
-    text-align: center;
-    align-items: center;
-  }
-
-  .nav-bar a {
-    justify-content: center;
-    gap: 0.9rem 1.25rem;
-  }
-
-  .research-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .faculty-grid,
-  .student-grid,
-  .robot-grid {
-    grid-template-columns: 1fr;
-  }
-  .nav-bar {
-    justify-content: center;
-  }
-}
-
-
-/* --- People Page Layout --- */
-.faculty-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-bottom: 1rem;
-  align-items: center;
-  justify-items: center;
-}
-
-.faculty-grid--single {
-  grid-template-columns: 1fr;
-}
-
-.faculty-card {
-  text-align: center;
-}
-
-/* NEW: Styles for the clickable link */
-a.profile-link {
-  color: inherit;
-  display: block;
-  transition: transform 0.2s ease-in-out;
-}
-
-a.profile-link:hover {
-  transform: translateY(-5px);
-}
-
-.faculty-card .faculty-img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto 1rem auto;
-}
-
-.faculty-card h3 {
-  margin: 0.5rem 0 0.25rem;
-  color: var(--dark-shade);
-}
-
-.faculty-card p {
-  margin: 0;
-  color: var(--subtext-color);
-}
-
-.student-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.student-card {
-  text-align: center;
-}
-
-.student-card .student-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 0.75rem;
-}
-
-.student-card h3 {
-  margin: 0 0 0.25rem;
-  color: var(--dark-shade);
-}
-
-.student-card p {
-  margin: 0;
-  color: var(--subtext-color);
-  font-size: 0.9rem;
-}
-
-/* --- NEW: Profile Page Layout --- */
-.profile-container {
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  gap: 2.5rem;
-  align-items: flex-start;
-  /* The "white box" styles have been removed from this rule */
-}
-
-.profile-photo img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.profile-details h2 {
-  margin-top: 0;
-  border-bottom: none;
-}
-
-.profile-details h3 {
   margin-top: 2rem;
-  border-bottom: 2px solid var(--light-shade);
-  padding-bottom: 0.5rem;
 }
 
-.profile-details .title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--subtext-color);
-  margin-top: -1rem;
-  margin-bottom: 1.5rem;
-}
-
-.profile-links {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0;
-}
-
-.profile-links li {
-  margin-bottom: 0.75rem;
-  /* A bit more space for links */
-}
-
-/* NEW: Styles for the profile links */
-.profile-links a {
-  font-weight: 600;
-}
-
-/* --- Alumni Section --- */
-.alumni-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 1.5rem;
-}
-
-.alumni-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 0.6rem 0.5rem;
-  border-bottom: 1px solid #e0e0e0;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.alumni-main-info .alumni-name {
-  font-weight: 600;
-  color: var(--dark-shade);
-}
-
-.alumni-main-info .alumni-grad-info {
-  font-size: 0.9rem;
-  color: var(--subtext-color);
-  padding-left: 0.25rem;
-}
-
-.alumni-next-position {
-  font-size: 0.9rem;
-  color: var(--subtext-color);
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-/* --- Robots Page Layout --- */
-.robot-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2.5rem;
-  margin-top: 2.5rem;
-}
-
-.robot-card {
+.research-area-card {
   text-align: center;
   background: white;
   border-radius: 12px;
-  padding: 0.5rem;
+  padding: 2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.robot-card img {
+.research-area-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.research-area-card h3 {
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.4rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--dark-shade);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.research-area-card .keywords {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.95rem;
+  color: var(--subtext-color);
+}
+
+.research-area-card img,
+.research-area-card video {
   display: block;
   width: 100%;
   aspect-ratio: 4/3;
@@ -440,59 +175,7 @@ a.profile-link:hover {
   border-radius: 10px;
 }
 
-.robot-card h3 {
-  margin: 0.75rem 0 0.25rem;
-  font-size: 1.05rem;
-  color: var(--dark-shade);
-  font-weight: 600;
-}
-
-.robot-card p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--subtext-color);
-}
-
-
-/* --- Responsive Media Queries --- */
-@media (max-width: 900px) {
-
-  .student-grid,
-  .robot-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .nav-bar a {
-    margin: 0 0.75rem;
-  }
-
-  .research-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .faculty-grid,
-  .student-grid,
-  .robot-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* --- Research Area Cards (Hybrid Style) --- */
+/* --- Research Page --- */
 .research-layout {
   max-width: 1200px;
   margin: 0 auto;
@@ -502,15 +185,11 @@ a.profile-link:hover {
   gap: 2rem;
 }
 
-/* =========================
-   Sidebar Menu
-   ========================= */
 .research-menu {
   position: sticky;
   top: 6rem;
-  /* accounts for sticky header height */
   align-self: start;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 6px;
   padding: 1rem;
@@ -541,179 +220,281 @@ a.profile-link:hover {
 .research-content section {
   margin-bottom: 3.5rem;
   scroll-margin-top: 6.5rem;
-  /* prevents sticky header overlap */
 }
 
 .research-content h2 {
   margin-top: 0;
   padding-bottom: 0.3rem;
-  border-bottom: 3px solid var(--primary-color);
 }
 
-.research-area-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2.5rem;
-  margin-top: 2.5rem;
-}
-
-.research-area-card {
-  background: white;
-  border-radius: 12px;
-  padding: 1.25rem 1.25rem 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.research-area-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-}
-
-.research-area-card h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.15rem;
+/* --- Publications --- */
+.year-header {
   color: var(--dark-shade);
-  border-bottom: 2px solid var(--primary-color);
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ddd;
 }
 
-.research-area-card p {
-  margin: 0.25rem 0 0.75rem;
+.publication-list {
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.publication-list li {
+  margin-bottom: 1.1rem;
+  padding-left: 0.5rem;
+  line-height: 1.5;
+  list-style-type: none;
+}
+
+.pub-title {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.pub-authors {
   font-size: 0.95rem;
+  color: var(--subtext-color);
+  margin-top: 0.1rem;
+}
+
+.pub-venue {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4a5866;
+  margin-top: 0.15rem;
+}
+
+/* --- People --- */
+.faculty-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-items: center;
+}
+
+.faculty-grid--single {
+  grid-template-columns: 1fr;
+}
+
+.faculty-card {
+  text-align: center;
+}
+
+a.profile-link {
+  display: block;
+  color: inherit;
+  transition: transform 0.2s ease-in-out;
+}
+
+a.profile-link:hover {
+  transform: translateY(-5px);
+}
+
+.faculty-card .faculty-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+}
+
+.faculty-card h3 {
+  margin: 0.5rem 0 0.25rem;
+  color: var(--dark-shade);
+}
+
+.faculty-card p {
+  margin: 0;
   color: var(--subtext-color);
 }
 
-.research-area-links a {
-  display: inline-block;
-  margin-right: 0.35rem;
-  font-size: 0.9rem;
-  font-weight: 600;
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 1.5rem;
+  margin-bottom: 1rem;
 }
 
+.student-card {
+  text-align: center;
+}
 
-.research-area-grid {
+.student-card .student-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+.student-card h3 {
+  margin: 0 0 0.25rem;
+  color: var(--dark-shade);
+}
+
+.student-card p {
+  margin: 0;
+  color: var(--subtext-color);
+  font-size: 0.9rem;
+}
+
+.alumni-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.alumni-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.alumni-main-info .alumni-name {
+  font-weight: 600;
+  color: var(--dark-shade);
+}
+
+.alumni-main-info .alumni-grad-info {
+  font-size: 0.9rem;
+  color: var(--subtext-color);
+  padding-left: 0.25rem;
+}
+
+.alumni-next-position {
+  font-size: 0.9rem;
+  color: var(--subtext-color);
+}
+
+/* --- Lab Platforms --- */
+.robot-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
   margin-top: 2.5rem;
 }
 
-@media (max-width: 992px) {
-  .research-area-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .research-area-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-.section-title {
+.robot-card {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.section-divider {
-  width: 60px;
-  height: 3px;
-  background-color: #333;
-  border: none;
-  margin: 0 auto 2rem auto;
-}
-
-.two-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.area-box {
   background: white;
-  padding: 2rem;
   border-radius: 12px;
+  padding: 0.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s ease;
 }
 
-.area-box:hover {
-  transform: translateY(-5px);
+.robot-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.area-box h3 {
-  margin-bottom: 0.75rem;
-  font-size: 1.3rem;
+.robot-card h3 {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 1.05rem;
   font-weight: 600;
+  color: var(--dark-shade);
 }
 
-.keywords {
-  font-size: 0.95rem;
-  color: #555;
+.robot-card p {
   margin: 0;
+  font-size: 0.9rem;
+  color: var(--subtext-color);
 }
 
-@media (max-width: 800px) {
-  .two-grid {
-    grid-template-columns: 1fr;
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  .student-grid,
+  .robot-grid {
+    grid-template-columns: 1fr 1fr;
   }
-}
-
-@media (max-width: 768px) {
 
   .research-layout {
     grid-template-columns: 1fr;
-    padding: 1.25rem 0.75rem;
   }
 
   .research-menu {
     position: relative;
     top: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .research-area-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .nav-bar a {
+    margin: 0 0.75rem;
+  }
+
+  .justified-text {
+    text-align: left;
+  }
+
+  .research-layout {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .research-menu {
     margin-bottom: 0;
   }
 
   .research-menu a {
     padding: 0.6rem 0.5rem;
   }
+}
 
-  body {
-    overflow-x: hidden;
+@media (max-width: 600px) {
+  .faculty-grid,
+  .student-grid,
+  .robot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-bar {
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
-
-  .research-layout>* {
+  .research-layout > * {
     min-width: 0;
   }
 
   .research-layout {
-    width: 100%;
-    max-width: 100%;
+    box-sizing: border-box;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
-    box-sizing: border-box;
   }
 
   .research-menu {
-    width: 100%;
-    max-width: 100%;
     box-sizing: border-box;
-    margin-bottom: 0;
   }
 
   .research-menu a {
-    max-width: 100%;
-    white-space: normal;
     word-break: break-word;
-  }
-
-  html,
-  body {
-    overflow-x: hidden;
   }
 }
